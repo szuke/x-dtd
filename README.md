@@ -5,8 +5,8 @@ This will be used for imports to xTuple - existing xtupleapi.dtd is out-of-date
 
 
 Making use of the project, https://github.com/SweetIQ/schemats. Learning typescript as I go.
-This is what is generated for the api.contact view:
-
+# This is what is generated for the api.contact view:
+```
 export namespace contactFields {
     export type contact_number = string | null;
     export type honorific = string | null;
@@ -66,12 +66,12 @@ export interface contact {
     address_change: contactFields.address_change;
 
 }
+```
 
 
 
-
-This is what we're looking for:
-
+# This is what we're looking for:
+```
 <!ELEMENT contact ( contact_number?,
 		    honorific?,
 		    first?,
@@ -97,3 +97,4 @@ This is what we're looking for:
 <!ATTLIST contact	mode	(insert|update)	'insert'
 			ignore 	(true|false)	'false'
 			key	CDATA	#FIXED	'contact_number' >
+```
